@@ -225,6 +225,10 @@
     background-color: #fafafa;
 }
 
+.content-wrap .experience-data .experience-data-wrap .data-grid .data-box.massive img {
+    background-color: #0e0e0e;
+}
+
 .content-wrap .experience-data .experience-data-wrap .data-grid .data-box:hover {
     border: 1px solid #333333;
     box-shadow: 0px 12px 16px 0px #121212;
