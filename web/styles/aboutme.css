@@ -1,0 +1,517 @@
+.content-wrap {
+    width: calc(100% - 2rem);
+    padding: 1rem;
+}
+
+.content-wrap .filters {
+    margin-bottom: 1rem;
+}
+
+.content-wrap .filters p {
+    text-align: left;
+}
+
+.content-wrap .about-data {
+    margin-bottom: 1rem;
+    
+}
+
+.content-wrap .about-data h1 {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0rem;
+    margin-bottom: 1rem;
+    color: #a39e00;
+}
+
+.content-wrap .about-data .about-txt {
+    border-radius: 0.5rem;
+    border: 1px dashed #333100;
+    padding: 1rem
+}
+
+.content-wrap .about-data .about-txt p {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;    
+    letter-spacing: 0.015rem;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.content-wrap .about-data .about-txt p:last-child {
+    margin-bottom: 0;
+}
+
+.content-wrap .personal-data {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.content-wrap .personal-data .info-box {
+    background-color: #101010;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #232323;
+    box-shadow: 0 5px 0px 0px #121212;
+    transition: box-shadow 222ms ease-in-out,
+                border 222ms ease-in-out;
+}
+
+.content-wrap .personal-data .info-box:last-of-type {
+    margin-left: auto;
+}
+
+.content-wrap .personal-data .info-box:hover {
+    border: 1px solid #333333;
+    box-shadow: 0px 12px 16px 0px #121212;
+}
+
+.content-wrap .personal-data .info-box:first-of-type {
+    border-radius: 2.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.content-wrap .personal-data p,
+.content-wrap .personal-data h1 {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.content-wrap .personal-data h1 {
+    font-size: 1rem;
+    letter-spacing: 0.02rem;
+    margin-bottom: 0.5rem;
+    color: #a39e00;
+}
+
+.content-wrap .personal-data p {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;    
+    letter-spacing: 0.015rem;
+    font-size: 0.75rem;
+}
+
+.content-wrap .personal-data .info-box .links-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.content-wrap .personal-data .info-box .links-wrap a {
+    transition: color 222ms ease-in-out;
+    font-size: 0.75rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.content-wrap .personal-data .info-box .links-wrap a:hover {
+    color: #fff703;
+}
+
+.content-wrap .personal-data .info-box .links-wrap a img {
+    width: 1.25rem;
+    height: auto;
+    margin-right: 0.5rem;
+}
+
+.content-wrap .personal-data .info-box .links-wrap a span {
+    display: block;
+}
+
+.content-wrap .academic-data {
+    display: grid;
+    /*grid-template-columns: 50% 50%;*/
+    grid-template-columns: 100%;
+    gap: 1rem;
+}
+
+.content-wrap .academic-data .academic-group h1 {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    color: #a39e00;
+}
+
+.content-wrap .academic-data .academic-group .items {
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 1rem;
+}
+
+.content-wrap .academic-data .academic-group .items .academic-box {
+    border-radius: 0.5rem;
+    background-color: #101010;
+    padding: 1rem;
+    border: 1px solid #232323;
+    box-shadow: 0 5px 0px 0px #121212;
+    transition: box-shadow 222ms ease-in-out,
+                border 222ms ease-in-out;
+}
+
+.content-wrap .academic-data .academic-group .items .academic-box:hover {
+    border: 1px solid #333333;
+    box-shadow: 0px 12px 16px 0px #121212;
+}
+
+.content-wrap .academic-data .academic-group .items .academic-box p {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;    
+    letter-spacing: 0.02rem;
+    font-size: 0.75rem;
+}
+
+.content-wrap .academic-data .academic-group .items .academic-box p:last-of-type {
+    margin-top: 0.25rem;
+    color: #b7b7b7;
+}
+
+.content-wrap .experience-data h1 {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    color: #a39e00;
+}
+
+.content-wrap .experience-data .experience-data-wrap .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 1rem;
+}
+
+.content-wrap .experience-data .experience-data-wrap .data-grid .data-box {
+    transition: box-shadow 222ms ease-in-out,
+                border 222ms ease-in-out;
+    background-color: #101010;
+    border: 1px solid #232323;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 0px 0px #121212;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.content-wrap .experience-data .experience-data-wrap .data-grid .data-box img {
+    width: 3.25rem;
+    height: 3.25rem;
+    object-fit: contain;
+    margin-left: auto;
+    border-radius: 0.5rem;
+    background-color: #fafafa;
+}
+
+.content-wrap .experience-data .experience-data-wrap .data-grid .data-box:hover {
+    border: 1px solid #333333;
+    box-shadow: 0px 12px 16px 0px #121212;
+}
+
+.content-wrap .experience-data .experience-data-wrap .data-grid .data-box p {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;    
+    letter-spacing: 0.02rem;
+    font-size: 0.75rem;
+}
+
+.content-wrap .experience-data .experience-data-wrap .data-grid .data-box p:nth-of-type(2) {
+    margin-top: 0.25rem;
+    color: #b7b7b7;
+}
+
+.content-wrap .experience-data .experience-data-wrap .data-grid .data-box p:last-of-type {
+    margin-top: 0.25rem;
+    color: #b7b7b7;
+}
+
+.content-wrap .soft-skills {
+    margin-bottom: 3rem;
+}
+
+.content-wrap .soft-skills h1 {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    color: #a39e00;
+}
+
+.content-wrap .soft-skills .skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1rem;
+}
+
+.content-wrap .soft-skills .skills-list .skill {
+    border-radius: 0.5rem;
+    background-color: #101010;
+    border: 1px solid #232323;
+    padding: 1rem;
+    box-shadow: 0 5px 0px 0px #121212;
+    transition: box-shadow 222ms ease-in-out,
+                border 222ms ease-in-out;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-wrap .soft-skills .skills-list .skill:hover {
+    border: 1px solid #333333;
+    box-shadow: 0px 12px 16px 0px #121212;
+}
+
+.content-wrap .soft-skills .skills-list .skill p {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;    
+    letter-spacing: 0.015rem;
+    font-size: 0.75rem;
+}
+
+.content-wrap .languages-data {
+    padding: 1rem;
+    border: 1px dashed #333100;
+    border-radius: 0.5rem;
+}
+
+.content-wrap .languages-data .langs-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.content-wrap .languages-data .langs-wrap p {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;    
+    letter-spacing: 0.02rem;
+    font-size: 0.75rem;
+
+    border-radius: 0.5rem;
+    background-color: #101010;
+    padding: 1rem;
+    border: 1px solid #232323;
+    box-shadow: 0 5px 0px 0px #121212;
+    transition: box-shadow 222ms ease-in-out,
+                border 222ms ease-in-out;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.content-wrap .languages-data .langs-wrap p img {
+    width: 1.5rem;
+    height: auto;
+    margin-right: 0.5rem;
+}
+
+.content-wrap .languages-data .langs-wrap p:hover {
+    border: 1px solid #333333;
+    box-shadow: 0px 12px 16px 0px #121212;
+}
+
+.content-wrap .languages-data h1 {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0rem;
+    margin-bottom: 1rem;
+    color: #a39e00;
+}
+
+.content-wrap .programs h1 {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0rem;
+    margin-top: 3rem;
+    color: #a39e00;
+}
+
+.content-wrap .programs .programs-wrap {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+    border: 1px dashed #333100;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+
+.content-wrap .programs .programs-wrap h1 {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0rem;
+    margin-bottom: 1rem;
+}
+
+.content-wrap .programs .programs-wrap h2 {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.content-wrap .programs .programs-wrap .prog-title {
+    margin-top: 3rem;
+}
+
+.content-wrap .programs .programs-wrap .prog-title:first-of-type {
+    margin-top: 0;
+}
+
+.content-wrap .programs .programs-wrap .prog-box {
+    /*display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;*/
+    
+    gap: 1rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+}
+
+.content-wrap .programs .programs-wrap .prog-box .prog-name {
+    background-color: #101010;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: 0 5px 0px 0px #121212;
+    border: 1px solid #232323;
+    transition: box-shadow 222ms ease-in-out,
+                border 222ms ease-in-out;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.content-wrap .programs .programs-wrap .prog-box .prog-name:hover {
+    border: 1px solid #333333;
+    box-shadow: 0px 12px 16px 0px #121212;
+}
+
+.content-wrap .programs .programs-wrap .prog-box .prog-name p {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;    
+    letter-spacing: 0.02rem;
+    font-size: 0.75rem;
+}
+
+.content-wrap .programs .programs-wrap .prog-box .prog-name p.small {
+    font-size: 0.65rem;
+}
+
+.content-wrap .programs .programs-wrap .prog-box .prog-name img {
+    transition: filter 222ms ease-in-out;
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+    /*filter: saturate(0);*/
+    margin-bottom: 0.5rem;
+}
+
+.content-wrap .programs .programs-wrap .prog-box .prog-name:hover img {
+    filter: saturate(1);
+}
+
+.content-wrap .addinfo-data h1 {
+    color: #a39e00;
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.content-wrap .addinfo-data .info-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.content-wrap .addinfo-data .info-wrap .info {
+    border-radius: 0.5rem;
+    background-color: #101010;
+    padding: 1rem;
+    border: 1px solid #232323;
+    box-shadow: 0 5px 0px 0px #121212;
+    transition: box-shadow 222ms ease-in-out,
+                border 222ms ease-in-out;
+}
+
+.content-wrap .addinfo-data .info-wrap .info:hover {
+    border: 1px solid #333333;
+    box-shadow: 0px 12px 16px 0px #121212;
+}
+
+.content-wrap .addinfo-data .info-wrap .info p {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;    
+    letter-spacing: 0.02rem;
+    font-size: 0.75rem;
+}
+
+
+@media (max-width: 720px) {
+    .content-wrap .personal-data .info-box:last-of-type {
+        margin-left: unset;
+    }
+}
+
+@media (max-width: 550px) {
+    .content-wrap .addinfo-data .info-wrap .info,
+    .content-wrap .personal-data .info-box {
+        width: 100%;
+    }    
+}

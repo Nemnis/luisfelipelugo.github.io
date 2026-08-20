@@ -1,0 +1,421 @@
+:root {
+	--red: #FF0000;
+	--green: #00FF00;
+	--blue: #0000FF;
+	--black: #000000;
+}
+
+*, *:after, *:before {
+	padding: 0;
+	margin: 0;
+}
+
+/* --------- Fonts ---------- */
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* --- Helpers --- */
+.fh {
+	min-height: 100vh;
+}
+
+.container-line {
+	max-width: 60rem;
+	width: 100%;
+    margin: 0 auto;
+    border: 1px solid #4b4b4b;
+    border-radius: 3.5rem 0.5rem 0.5rem 0.5rem;
+	box-shadow: 0 10px 15px 0px #161616;
+}
+
+.container-black {
+	background-color: #101010;
+}
+
+.container-line .main_coming p {
+	padding: 1rem 1rem 1rem 2.5rem;
+}
+
+.p1-rl {
+	padding-right: 1rem;
+	padding-left: 1rem;
+}
+
+/* --------- CSS ---------- */
+body {
+	min-height: 100vh;
+}
+
+html {
+	background-color: #181818;
+	color: #ffffff;
+}
+
+a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.title_main {
+	text-align: center;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+	color: #ffffff;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+
+.main_section {
+	height: 100vh;
+}
+
+.main_home_wrap {
+	padding: 1rem;
+	height: 100%;
+}
+
+.main_home_wrap .console_wrap {
+	padding: 0.5rem 0rem 0rem 0.5rem;
+	background-color: #101010;
+	border-radius: 2.5rem 0.5rem 0.5rem 0.5rem;
+	box-shadow: 0px 5px 6px 0px #161616;
+	font-size: 0.725rem;
+	height: calc(100% - 2.5rem);
+}
+
+.txtGreen {
+	color: #87ff79;
+}
+
+.txtViolet {
+	color: #c369ff;
+}
+
+.txtWhite {
+	color: #ffffff;
+}
+
+.main_home_wrap .console_wrap .console_pad {
+	padding: 1rem;
+	height: 100%;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-grow: 1;
+}
+
+.main_home_wrap .console_wrap .console_pad .tools_wrap {
+	margin-bottom: 1rem;
+	width: 100%;
+	position: relative;
+}
+
+.console_logo {
+	max-width: 1.25rem;
+	height: auto;
+	position: absolute;
+	top: -0.22rem;
+	left: 0;
+}
+
+.window_controls {
+	position: absolute;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: flex-end;
+	right: 0;
+	top: 0;
+}
+
+.window_controls span {
+	display: block;
+	width: 0.75rem;
+	height: 0.75rem;
+	border: 1px solid #222222;
+	border-radius: 2rem;
+	margin-left: 0.25rem;
+	transition: background-color 222ms ease-in-out;
+}
+
+.window_controls span:hover {
+	cursor: pointer;
+	transform: rotate(90deg);
+}
+
+.window_controls span:first-of-type {
+	background-color: #ff9059;
+}
+
+.window_controls span:nth-of-type(2) {
+	background-color: #c369ff;
+}
+
+.window_controls span:last-of-type {
+	background-color: #87ff79;
+}
+
+.window_controls span:first-of-type:hover {
+	background-color: #f3590c;
+}
+
+.window_controls span:nth-of-type(2):hover {
+	background-color: #9d23ee;
+}
+
+.window_controls span:last-of-type:hover {
+	background-color: #3cca2c;
+}
+
+.main_home_wrap .console_wrap .console_pad .tools_wrap h5 {
+	color: #818181;
+}
+
+.titleConsoleStyle {
+	color: #ff9059;
+}
+
+.timeSpot_wrap #timeSpot {
+	transition: color 222ms ease-in-out;
+	font-size: 0.55rem;
+	text-align: center;
+	letter-spacing: 0.015rem;
+	color: #818181;
+}
+
+.timeSpot_wrap #timeSpot:hover {
+	color: #ffffff;
+}
+
+.main_home_wrap .console_wrap .console_pad .tools_wrap .tools_box {
+	border-top: 1px dashed #222222;
+	border-bottom: 1px dashed #222222;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	margin-top: 1rem;
+}
+
+.main_home_wrap .console_wrap .console_pad .output_wrap {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.main_home_wrap .console_wrap .console_pad .output_wrap .console_write .element_wrap {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: flex-start;
+	min-height: 1.5rem;
+}
+
+.main_home_wrap .console_wrap .console_pad .output_wrap .console_write .element_wrap p {
+	line-height: 1.25rem;
+}
+
+.main_home_wrap .console_wrap .console_pad .output_wrap .console_write .element_wrap a {
+	display: block;
+	padding-left: 2rem;
+	color: #00ffff;
+}
+
+.main_home_wrap .console_wrap .console_pad .output_wrap .console_write .element_wrap a:hover {
+	color: #ff9059;
+	cursor: pointer;
+}
+
+.main_home_wrap .console_wrap .console_pad .output_wrap .console_write .element_wrap #element3,
+.main_home_wrap .console_wrap .console_pad .output_wrap .console_write .element_wrap #element2,
+.main_home_wrap .console_wrap .console_pad .output_wrap .console_write .element_wrap #element {
+	color: #87ff79;
+	height: 1.25rem;
+}
+
+.main_home_wrap .console_wrap .console_pad .output_wrap .console_write .element_wrap #element3 span,
+.main_home_wrap .console_wrap .console_pad .output_wrap .console_write .element_wrap #element2 span,
+.main_home_wrap .console_wrap .console_pad .output_wrap .console_write .element_wrap #element span {
+	display: inline-block;
+}
+
+.main_home_wrap .console_wrap .console_pad .output_wrap .console_path .path {
+	padding-right: 0.25rem;
+	background-color: #222222;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0.25rem 0.75rem 0.25rem 0.5rem;
+	border-radius: 1rem;
+	margin-right: 0.33rem;
+}
+
+.main_home_wrap .console_wrap .console_pad .output_wrap .path .nsign {
+	color: #ff9059;
+	font-size: 1rem;
+	height: 1rem;
+	bottom: 0.18rem;
+	position: relative;
+}
+
+.main_home_wrap .console_wrap .console_pad .output_wrap .path .arroba {
+	color: #87ff79;
+}
+
+main {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 3rem;
+}
+
+.under-construction {
+	transition: border-color 222ms ease-in-out,
+	 			box-shadow 222ms ease-in-out,
+				border-radius 222ms ease-in-out,
+				padding 444ms ease-in-out;
+	position: fixed;
+	background-color: #101010;
+	bottom: 1rem;
+	right: 1rem;
+	border-radius: 10rem;
+	border: 2px solid #232323;
+	z-index: 11;
+	box-shadow: 0 5px 0px 0px #121212;
+	padding: 0;
+	/*transform: translateX(-1rem) translateY(-1rem);*/
+}
+
+.under-construction:hover {
+	cursor: pointer;
+	border-color: #fff703;
+	box-shadow: 0px 12px 16px 0px #2d2b00;
+}
+
+.under-construction .udc-wrap p {
+	font-family: "Space Mono", monospace;
+	font-weight: 400;
+	font-style: normal;
+	display: none;
+}
+
+.under-construction .udc-wrap .img-wrap {
+	text-align: center;
+	padding: 0.5rem;
+}
+
+.under-construction .udc-wrap svg {
+	width: 1.75rem;
+	height: 1.75rem;
+	object-fit: contain;
+}
+
+.under-construction .udc-wrap img {
+	display: none;
+}
+
+.under-construction.active {
+	/*transform: translateX(0) translateY(0);*/
+	box-shadow: 0px 12px 16px 0px #121212;
+	top: 1rem;
+	left: 1rem;
+	border-radius: 0.5rem;
+	padding: 1rem;
+}
+
+.under-construction.active .udc-wrap img {
+	display: block;
+	margin: 2rem auto 1rem;
+	border-radius: 0.5rem;
+	max-width: 30rem;
+	width: 100%;
+}
+
+.under-construction.active .udc-wrap p {
+	display: block;
+	text-align: center;
+}
+
+.under-construction.active:hover {
+	cursor: pointer;
+	border-color: #232323;
+}
+
+/* Media Queries */
+
+@media (min-width: 960px) {
+	.timeSpot_wrap p {
+		font-size: 0.7rem!important;
+	}
+}
+
+@media (max-width: 650px) {
+	.timeSpot_wrap p {
+		max-width: 15rem;
+		text-align: left!important;
+		margin-left: 2rem;
+		margin-top: -0.25rem;
+	}
+}
+
+@media (max-width: 500px) {
+	.title_main {
+		font-size: .5rem;
+	}
+	.title_collector {
+		font-size: .7rem;
+	}
+	.main_home_wrap .console_wrap .console_pad {
+		width: calc(100% - 2rem);
+	}
+	.main_home_wrap .console_wrap .console_pad .output_wrap {
+		flex-flow: column wrap;
+		width: 100%;
+	}
+	.main_home_wrap .console_wrap .console_pad .output_wrap .console_path {
+		margin-bottom: 0.5rem;
+		width: 100%;
+	}
+	.main_home_wrap .console_wrap .console_pad .output_wrap .console_path .path {
+		justify-content: center;
+	}
+	.timeSpot_wrap #timeSpot {
+		max-width: 14rem;
+		text-align: left!important;
+		margin-left: 2rem;
+		margin-top: -0.25rem;
+	}
+}
+
+@media (max-width: 450px) {
+	.timeSpot_wrap #timeSpot {
+		max-width: 12rem;
+		text-align: left!important;
+		margin-left: 2rem;
+		margin-top: -0.25rem;
+		font-size: 0.5rem;
+	}
+}

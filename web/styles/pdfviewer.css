@@ -1,0 +1,14 @@
+.fix_w {
+    width: calc(100% - 2rem);
+}
+
+.ifram_wrap {
+    padding: 1rem;
+    height: 60vh;
+}
+
+.ifram_wrap iframe {
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    height: 100%;
+}

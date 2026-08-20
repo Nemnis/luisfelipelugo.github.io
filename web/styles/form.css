@@ -1,0 +1,117 @@
+/* Login Form */
+.or_wrap {
+    text-align: center;
+    padding: 0 1rem 1rem;
+}
+
+.or_wrap .btn_login {
+    display: block;
+    color: #ff9059;
+    padding-top: 1rem;
+}
+
+.login_wrap {
+	max-width: 25rem;
+	margin: 0 auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.login_wrap form {
+	display: grid;
+	grid-template-columns: 100%;
+}
+
+.login_wrap form label {
+    margin-top: 1.25rem;
+    margin-bottom: 0.33rem;
+    font-size: 0.9rem;
+}
+
+.login_wrap form label.label_nick {
+    margin-top: 0;
+}
+
+.login_wrap form input {
+    border-radius: 0.25rem;
+    background-color: #222222;
+    border: 1px solid #4b4b4b;
+    box-shadow: 0 10px 15px 0px #161616;
+    padding: 0.5rem;
+    color: #ffffff;
+}
+
+.login_wrap form input::placeholder {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.login_wrap form input[type="submit"] {
+    transition: background-color 222ms ease-in-out,
+                box-shadow 2s ease-in-out;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1rem;
+    background-color: #332a26;
+    border-radius: 0.25rem 0.25rem 1rem 0.25rem;
+}
+
+.login_wrap form input[type="submit"]:hover {
+    background-color: #ff9059;
+    cursor: pointer;
+    box-shadow: 0 10px 15px 0px #3d1400;
+}
+
+.login_wrap form input[type="submit"]:disabled {
+    background-color: #222222;
+}
+
+
+.login_wrap form .legal_input_wrap {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    align-items: center;
+
+}
+
+.login_wrap form .legal_input_wrap a {
+    transition: color 222ms ease-in-out;
+    color: #ff9059;
+}
+
+.login_wrap form .legal_input_wrap a:hover {
+    color: #ee6c2a;
+}
+
+.login_wrap form .legal_input_wrap input {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid #555;
+    border-radius: 1.5rem;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.login_wrap form .legal_input_wrap input:checked {
+    background-color: #523ad6;
+    border-color: #523ad6;
+}
+
+.login_wrap form .legal_input_wrap input:checked::before {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.login_wrap form .legal_input_wrap label {
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+@media (max-width: 500px){}
