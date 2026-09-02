@@ -1,0 +1,8 @@
+title: Luis Lugo - Web Designer & Developer
+description: Portfolio Luis Lugo
+
+url: "https://luisfelipelugo.com"
+baseurl: ""
+
+plugins:
+  - jekyll-feed

@@ -1,0 +1,168 @@
+nav {
+    padding: 1rem 0;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	transition: background-color 333ms ease-in-out,
+				box-shadow 333ms ease-in-out;
+}
+
+nav.scrolled {
+	background-color: rgba(0, 0, 0, 0.85);
+	box-shadow: 0 10px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+nav ul {
+	display: flex;
+	flex-flow: row wrap;
+	text-align: center;
+	justify-content: flex-start;
+	gap: 2rem;
+}
+
+nav ul li {
+	list-style: none;
+}
+
+nav ul li span {
+	padding: 0.5rem 0.5rem 0.5rem 0;
+	font-size: 0.75rem;
+}
+
+nav ul li:hover {
+	cursor: pointer;
+}
+
+nav ul li,
+nav ul li a {
+	transition: color 300ms ease-in-out;
+	text-align: left;
+	font-size: 0.75rem;
+}
+
+nav ul li:hover,
+nav ul li a:hover {
+	color: #fff703;
+}
+
+nav ul li.active a {
+    color: #fff703;
+}
+
+nav ul li ul {
+	display: none;
+	position: absolute;
+	background-color: #141414;
+	border-radius: 0 0.5rem 0.5rem 0;
+	min-width: 8rem;
+	margin-top: 0.4rem;
+}
+
+nav ul li ul::before {
+	content: '';
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 8px 8px 0 0;
+	border-color: #fff703 transparent transparent transparent;
+	transform: rotate(0deg);
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+nav ul li ul li {
+	padding-bottom: 0.75rem;
+	padding-top: 0.75rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	border-left: 1px solid #fff703;
+}
+
+nav ul li ul li a {
+	display: block;	
+	text-align: left;
+	font-size: 0.75rem;
+}
+
+nav ul li:hover ul {
+	display: block;
+}
+
+#btnLogSing {
+	margin-left: auto;
+}
+
+#btnClose a:hover {
+	color: #df4747;
+}
+
+#btnLogSing a.logButton:hover {
+	color: #87ff79;
+}
+
+#btnLogSing a.signButton {
+	margin-left: 1rem;
+}
+
+#btnLogSing a.signButton:hover {
+	color: #ff9059;
+}
+
+#userActions {
+	margin-left: auto;
+	display: none;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+#userActions:hover {
+	color: #ffffff;
+}
+
+#userActions a {
+	font-size: 0.75rem;
+	display: block;
+}
+
+#userNick::after {
+	content: '>';
+	position: absolute;
+	display: block;
+	width: 1rem;
+	height: 1rem;
+	margin-top: -1rem;
+	margin-left: -1rem;
+
+	animation: effect 555ms ease-in-out infinite;
+}
+
+@keyframes effect {
+	0% {
+		color: #7ad700;
+	}
+
+	100% {
+		color: #061605;
+	}
+}
+
+@media (max-width: 500px) {
+	nav ul li,
+	nav ul li a {
+		font-size:0.7rem;		
+	}
+}
+
+@media (max-width: 500px) {
+	nav ul {
+		gap: 1rem
+	}
+}

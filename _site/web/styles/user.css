@@ -1,0 +1,30 @@
+
+.user_info_wrap {
+    padding: 1rem;
+}
+
+.user_info_wrap .container-line {
+    width: calc(100% - 2rem);
+    padding: 1rem;
+}
+
+.user_info_wrap .container-line .info_wrap {
+    padding: 1.5rem 1rem 1rem 2.5rem;
+    border: 1px dashed #4b4b4b;
+    border-radius: 2.5rem 0.5rem 0.5rem 0.5rem;
+    background-color: #272727;
+    box-shadow: 0 10px 15px 0px #161616;
+}
+
+.user_info_wrap .container-line .info_wrap p {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 0.25rem;
+}
+
+.user_info_wrap .container-line .info_wrap p span:first-of-type {
+    min-width: 4rem;
+    color: #765eff;
+}

@@ -1,0 +1,9 @@
+.or_wrap {
+    text-align: center;
+}
+
+.or_wrap a {
+    color: #ff9059;
+    display: block;
+    padding-top: 1rem;    
+}
