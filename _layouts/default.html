@@ -4,9 +4,9 @@
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page.title }} | {{ site.title }}</title>
+    <title>{% if page.title %} {{ page.title }} | {% endif %} {{ site.title }}</title>
     <meta name="description" content="{{ site.description }}">
-    <link rel="icon" type="image/png" href="{{ '/web/images/favicon.png' | relative_url }}">
+    <link rel="icon" type="image/x-icon" href="{{ '/web/images/favicon.ico' | relative_url }}">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -21,6 +21,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ '/web/styles/style.css' | relative_url }}">
     <link rel="stylesheet" type="text/css" href="{{ '/web/styles/nav.css' | relative_url }}">
+    
+    {% if page.css %}
+        {% for stylesheet in page.css %}
+            <link rel="stylesheet" href="{{ stylesheet | relative_url }}">
+        {% endfor %}
+    {% endif %}
+
     <!-- MetaApps Meta Tags 
     <meta property="og:image" content="https://luisfelipelugo.com/web/images/luislugo_og.jpg">
     <meta property="og:url" content="https://luisfelipelugo.com">
@@ -38,7 +45,33 @@
 </head>
 
 <body>
-    {{ content }}
-    <!--<script src="{{ '/assets/js/main.js' | relative_url }}"></script>-->
+<div class="fh">
+    {% include nav.html %}
+    <!-- Gtag NoScript -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSKT6SZM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+        {{ content }}
+        <!--<script src="{{ '/assets/js/main.js' | relative_url }}"></script>-->
+
+    <div id="underCwrap" class="under-construction" onclick="openUnderC()">
+        <div class="udc-wrap">
+            <div class="img-wrap">
+                <svg height="34" viewBox="0 0 36 34" width="36" xmlns="http://www.w3.org/2000/svg"><path d="M27.6 14.2426092L27.6 15.6852683C27.6 16.2158254 27.1970563 16.6459269 26.7 16.6459269L21.3 16.6459269C20.8029437 16.6459269 20.4 16.2158254 20.4 15.6852683L20.4 14.2426092C11.4042134 14.9678356 6 18.0459827 6 16.6339865 6 15.1676293 14.906129 9.9124942 22.2 9.07386223L22.2 8.96065854C22.2 8.43010148 22.6029437 8 23.1 8L24.9 8C25.3970563 8 25.8 8.43010148 25.8 8.96065854L25.8 9.0732069C33.093871 9.9124942 42 15.1676293 42 16.6339865 42 18.0459827 36.5957866 14.9678356 27.6 14.2426092zM22.5 18L25.5 18C26.0522847 18 26.5 18.4477153 26.5 19L26.5 39.5C26.5 40.8807119 25.3807119 42 24 42L24 42C22.6192881 42 21.5 40.8807119 21.5 39.5L21.5 19C21.5 18.4477153 21.9477153 18 22.5 18z" fill="#ffffff" fill-rule="evenodd" transform="translate(-6 -8)"/></svg>
+            </div>
+            <img src="{{ '/web/images/gifs/offline-granny.gif' | relative_url }}" alt="Offline Granny">
+            <p>Este sitio está actualmente en desarrollo 👨🏽‍💻</p>
+        </div>
+    </div>
+</div>
+<script>
+    const underWrap = document.getElementById("underCwrap");
+
+    function openUnderC() {
+        underWrap.classList.toggle("active")
+    }
+</script>
 </body>
 </html>

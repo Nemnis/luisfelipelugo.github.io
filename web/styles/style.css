@@ -70,6 +70,7 @@ body {
 html {
 	background-color: #181818;
 	color: #ffffff;
+	scroll-behavior: smooth;
 }
 
 a {
