@@ -1,0 +1,11 @@
+es:
+  name: Español
+  flag: /web/images/flags/es.png
+
+en:
+  name: English
+  flag: /web/images/flags/en.png
+
+de:
+  name: Deutsch
+  flag: /web/images/flags/de.png

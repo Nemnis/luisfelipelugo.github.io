@@ -95,6 +95,35 @@ nav ul li:hover ul {
 	display: block;
 }
 
+.lang-selector {
+	margin-left: auto;
+}
+
+.lang-selector > div {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.lang-selector a {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: flex-end;
+	margin-right: 1rem;
+}
+
+.lang-selector a img {
+	display: block;
+	max-width: 1rem;
+	margin-right: 0.25rem;
+}
+
+.lang-selector a span {
+	padding: 0;
+}
+
 #btnLogSing {
 	margin-left: auto;
 }
@@ -154,15 +183,18 @@ nav ul li:hover ul {
 	}
 }
 
-@media (max-width: 500px) {
-	nav ul li,
-	nav ul li a {
-		font-size:0.7rem;		
-	}
+@media (max-width: 580px) {
+	.lang-selector a span {
+		display: none;
+	}	
 }
 
 @media (max-width: 500px) {
 	nav ul {
 		gap: 1rem
+	}
+	nav ul li,
+	nav ul li a {
+		font-size:0.7rem;		
 	}
 }

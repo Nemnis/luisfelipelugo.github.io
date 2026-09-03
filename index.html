@@ -1,145 +1,33 @@
----
-layout: default
-title: Inicio
----
-<div class="title_main p1-rl" id="scene">
-<pre data-depth="0.08">
- ____           __        ____                         
-|    |    __ __|__| _____|    |    __ __  ____   ____  
-|    |   |  |  \  |/  ___/    |   |  |  \/ ___\ /  _ \ 
-|    |___|  |  /  |\___ \|    |___|  |  / /_/  >  <_> )
-|_______ \____/|__/____  >_______ \____/\___  / \____/ 
-        \/             \/        \/    /_____/         
-</pre>
-</div>
-	<main>
-		<!-- Section -->
-        <section class="container-line space-mono-regular main_section">
-            <div class="main_home_wrap">
-                <div class="console_wrap">
-                    <div class="console_pad">
-                        <div class="tools_wrap">					
-                            <div class="timeSpot_wrap">
-                                <img src="{{ '/web/images/favicon-32x32.png' | relative_url }}" alt="Luis Lugo" class="console_logo">
-                                <p id="timeSpot"></p>
-                                <p class="window_controls">
-                                    <span onclick="launchConf()"></span>
-                                    <span></span>
-                                    <span onclick="launchStars()"></span>
-                                </p>
-                            </div>
-                            <div class="tools_box">
-                                <h5>Tools</h5>
-                            </div>
-                        </div>
-                        <div class="output_wrap">
-                            <div class="console_path">
-                                <p class="path">&#35;root<span class="arroba">@</span>127.0.0.1 </p>
-                            </div>
-                            <div class="console_write">
-                                <div class="element_wrap">
-                                    <p id="element"></p>
-                                </div>
-                                <div class="element_wrap">
-                                    <p id="element2"></p>
-                                </div>
-                                <div class="element_wrap">
-                                    <p id="element3"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-	</main>
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
 
-<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script>
-    function randomInRange(min, max) {
-		return Math.random() * (max - min) + min;
-	}
+    <script>
+        const savedLang = localStorage.getItem('siteLanguage');
 
-	function launchConf() {
-		confetti({
-			angle: randomInRange(55, 125),
-			spread: randomInRange(50, 70),
-			particleCount: randomInRange(50, 100),
-			origin: { y: 0.6 },
-		});
-	}
+        if (savedLang) {
+            window.location.replace('/' + savedLang + '/');
+        } else {
+            const browserLang = navigator.language.toLowerCase();
 
-	/* Conffeti Stars Animation */
+            let lang = 'es';
 
-	const defaults = {
-		spread: 360,
-		ticks: 50,
-		gravity: 0,
-		decay: 0.94,
-		startVelocity: 30,
-		shapes: ["star"],
-		colors: ["FFE400", "FFBD00", "E89400", "FFCA6C", "FDFFB8"],
-	};
+            if (browserLang.startsWith('en')) {
+                lang = 'en';
+            } else if (browserLang.startsWith('de')) {
+                lang = 'de';
+            }
 
-	function shoot() {
-		confetti({
-			...defaults,
-			particleCount: 40,
-			scalar: 1.2,
-			shapes: ["star"],
-		});
+            localStorage.setItem('siteLanguage', lang);
 
-		confetti({
-			...defaults,
-			particleCount: 10,
-			scalar: 0.75,
-			shapes: ["circle"],
-		});
-	}
+            window.location.replace('/' + lang + '/');
+        }
+    </script>
+</head>
 
-	function launchStars() {
-		setTimeout(shoot, 0);
-		setTimeout(shoot, 100);
-		setTimeout(shoot, 200);
-	}
-
-	setTimeout(() => {
-		let typed = new Typed('#element', {
-			strings: ['<i class="txtWhite">Cargando</i>...^600....^200.^200.^200.^200......^700....^1200.. <span class="txtGreen">OK</span> ^1000', '<span class="txtWhite">Espere por favor</span> <span class="txtViolet">:)</span> ^1200', '<span class="txtWhite titleConsoleStyle">PortFolio v2.0</span> <span class="txtGreen">Carga completada</span>'],
-			typeSpeed: 15,
-			fadeOut: true,
-			onComplete: function(self) { self.cursor.remove() },
-		});
-		
-	}, "700");
-
-	setTimeout(() => {
-		let typed2 = new Typed('#element2', {
-			strings: ['<span class="txtViolet">-----------------------</span></br><i><span class="txtViolet">Links cargados</span></i></br><span class="txtViolet">-----------------------</span></br></br> ^500 '],
-			typeSpeed: 0,
-			backSpeed: 0,
-			showCursor: false,
-			//onComplete: function(self) { self.cursor.remove() },
-			//loop: true,
-		});
-	}, "11000");
-
-	setTimeout(() => {
-		let typed2 = new Typed('#element3', {
-			strings: ['<br><br><span class="txtWhite">Home</span></br><a href="/aboutme.html" rel="nofollow noopener noreferrer">- About Me</a><span class="txtWhite">Proyectos</span><a rel="nofollow noopener noreferrer" href="./#"> - Data Collector</a><a rel="nofollow noopener noreferrer" href="./#"> - Seguridad Informática</a><a href="https://luisfelipelugo.com/works/old_web/" target="_blank">- Old Website</a> </br>'],
-			typeSpeed: 20,
-			backSpeed: 0,
-			showCursor: false,
-			//onComplete: function(self) { self.cursor.remove() },
-			//loop: true,
-		});
-	}, "11500");
-
-	// Display DateTime on webConsole
-	const dateSpot = document.getElementById("timeSpot");
-	const d = new Date();
-	
-	dateSpot.innerHTML = d;
-</script>
+<body>
+    <p>Detectando idioma...</p>
+</body>
+</html>

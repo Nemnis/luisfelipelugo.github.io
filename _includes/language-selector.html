@@ -1,0 +1,18 @@
+<div class="language-selector">
+    {% for language in site.data.languages %}
+        {% assign lang_code = language[0] %}
+        
+        {% assign translated_page = site.pages
+            | where: "lang", lang_code
+            | where: "translation_key", page.translation_key
+            | first %}
+        {% if translated_page %}
+            <a href="{{ translated_page.url | relative_url }}" {% if page.lang == lang_code %}class="active"{% endif %}>
+                <img src="{{ language[1].flag | relative_url }}" alt="{{ language[1].name }}"><span>{{ language[1].name }}</span>
+            </a>
+
+        {% endif %}
+
+    {% endfor %}
+
+</div>
