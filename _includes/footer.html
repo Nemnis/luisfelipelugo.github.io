@@ -1,0 +1,33 @@
+{% assign current_language = site.data.languages[page.lang] %}
+<footer class="site-footer">    
+    <div class="footer-content">
+        <p>{{ current_language.footer.devtech }}</p>
+        <!--<nav class="footer-nav">
+            {% for item in site.data.navigation %}
+                {% assign footer_page = site.pages
+                    | where: "lang", page.lang
+                    | where: "translation_key", item.key
+                    | first
+                %}
+                {% if footer_page %}
+                    <a href="{{ footer_page.url | relative_url }}">
+                        {{ current_language.nav[item.key] }}
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </nav>
+
+        <div class="footer-links">
+            <a href="#">
+                {{ current_language.footer.privacy }}
+            </a>
+            <a href="#">
+                {{ current_language.footer.contact }}
+            </a>
+        </div>-->
+        <p class="footer-copyright">
+            Luis Lugo © {{ 'now' | date: "%Y" }}. 
+            {{ current_language.footer.copyright }}
+        </p>
+    </div>
+</footer>

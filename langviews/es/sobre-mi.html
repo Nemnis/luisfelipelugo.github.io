@@ -1,272 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Sobre Mi |  Luis Lugo - Web Designer & Developer</title>
-    <meta name="description" content="Portfolio Luis Lugo">
-    <link rel="icon" type="image/x-icon" href="/web/images/favicon.ico">
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TSKT6SZM');</script>
-    <!-- End Google Tag Manager -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/web/styles/style.css">
-    <link rel="stylesheet" type="text/css" href="/web/styles/nav.css">
-    
-    
-        
-            <link rel="stylesheet" href="/web/styles/aboutme.css">
-        
-    
-
-    <!-- MetaApps Meta Tags 
-    <meta property="og:image" content="https://luisfelipelugo.com/web/images/luislugo_og.jpg">
-    <meta property="og:url" content="https://luisfelipelugo.com">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Luis Lugo - Web Developer">
-    <meta property="og:description" content="Main Web and Portfolio by Luis Lugo">-->
-
-    <!-- Twitter Meta Tags 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="luisfelipelugo.com">
-    <meta property="twitter:url" content="https://luisfelipelugo.com">
-    <meta name="twitter:title" content="Luis Lugo - Web Developer">
-    <meta name="twitter:description" content="Main Web and Portfolio by Luis Lugo">
-    <meta name="twitter:image" content="https://luisfelipelugo.com/web/images/luislugo_og.jpg">-->
-</head>
-
-<body>
-<div class="fh">
-    <nav class="space-mono-regular p1-rl">
-    <ul>
-        <li>
-        
-
-        
-
-            
-
-            
-                <a href="/es/">Inicio</a>
-            
-
-        
-
-            
-
-            
-                <a href="/es/sobre-mi">Sobre mí</a>
-            
-
-        
-        </li>
-        <li class="lang-selector">
-            <div class="language-selector">
-    
-        
-        
-        
-        
-            <a href="/es/sobre-mi" class="active">
-                <img src="/web/images/flags/es.png" alt="Español"><span>Español</span>
-            </a>
-
-        
-
-    
-        
-        
-        
-        
-            <a href="/en/about-me" >
-                <img src="/web/images/flags/en.png" alt="English"><span>English</span>
-            </a>
-
-        
-
-    
-        
-        
-        
-        
-            <a href="/de/ueber-mich" >
-                <img src="/web/images/flags/de.png" alt="Deutsch"><span>Deutsch</span>
-            </a>
-
-        
-
-    
-
-</div>
-        </li>
-    </ul>
-</nav>
-<script>
-    // nav change on scroll
-    let scrollpos = window.scrollY;
-    const header = document.querySelector("nav");
-    const header_height = header.offsetHeight;
-    
-    const add_class_on_scroll = () => header.classList.add("scrolled");
-    const remove_class_on_scroll = () => header.classList.remove("scrolled");
-    
-    window.addEventListener('scroll', function() { 
-    	scrollpos = window.scrollY;
-        //console.log("header_height " + header_height + " | scrollpos " + scrollpos);
-    
-    	if (scrollpos >= header_height) { 
-            add_class_on_scroll();
-        } else {
-            remove_class_on_scroll();
-        }
-        
-        if(scrollpos == header_height && scrollpos == 0 && header_height == 0) {
-            remove_class_on_scroll();
-        }
-    
-    });
-</script>
-<!-- Old Nav -->
-<!--<nav class="space-mono-regular p1-rl">
-    <ul>
-        <li class="link-home">
-            <a href="/">Home</a>
-        </li>
-        <li class="link-about-me">
-            <a href="/aboutme.html">About Me</a>			
-        </li>
-        <li class="link-projects">
-            <span>Projects</span>
-            <ul>
-                <li>
-                    <a href="/oldwebpage.html" target="_blank">Old Website</a>
-                </li>
-                <li class="link-data-collector">
-                    <a href="#">Data Collector</a>		
-                </li>
-                <li class="link-seg-inf">
-                    <a href="#">Seguridad Informática</a>
-                </li>
-            </ul>
-        </li>
-        <li class="lang-selector">
-            <div class="language-selector">
-    
-        
-        
-        
-        
-            <a href="/es/sobre-mi" class="active">
-                <img src="/web/images/flags/es.png" alt="Español"><span>Español</span>
-            </a>
-
-        
-
-    
-        
-        
-        
-        
-            <a href="/en/about-me" >
-                <img src="/web/images/flags/en.png" alt="English"><span>English</span>
-            </a>
-
-        
-
-    
-        
-        
-        
-        
-            <a href="/de/ueber-mich" >
-                <img src="/web/images/flags/de.png" alt="Deutsch"><span>Deutsch</span>
-            </a>
-
-        
-
-    
-
-</div>
-        </li> 
--->
-        <!--<li id="userActions">			
-            <a id="userNick" href="#">User</a>
-        </li>
-        <li id="btnClose">
-            <a href="#">Bye</a>
-        </li>
-        <li id="btnLogSing">
-            <a class="logButton" href="#">LogIn</a>
-            <a class="signButton" href="#">SignIn</a>
-        </li>-->
-<!--    </ul>
-</nav>
-<script>
-    /* Nav */
-    /*const cookieValue = document.cookie.split("; ").find((row) => row.startsWith("User="))?.split("=")[1];
-	const userNick = document.getElementById("userNick");
-
-	const btnClose = document.getElementById("btnClose");
-	const btnLogSing = document.getElementById("btnLogSing");
-	const userActions = document.getElementById("userActions");
-	
-	if(cookieValue != null) {
-		//console.log(`no es null`);	
-		//console.log(`${cookieValue}`);
-		userNick.textContent = `${cookieValue}`;
-		btnClose.style.display = "block";
-		userActions.style.display = "flex";
-
-		btnLogSing.style.display = "none";
-	} else {
-		//console.log(`es null`);	
-		btnClose.style.display = "none";
-		userActions.style.display = "none";
-
-		btnLogSing.style.display = "block";
-	}*/
-
-	// nav change on scroll
-    let scrollpos = window.scrollY;
-    const header = document.querySelector("nav");
-    const header_height = header.offsetHeight;
-    
-    const add_class_on_scroll = () => header.classList.add("scrolled");
-    const remove_class_on_scroll = () => header.classList.remove("scrolled");
-    
-    window.addEventListener('scroll', function() { 
-    	scrollpos = window.scrollY;
-        //console.log("header_height " + header_height + " | scrollpos " + scrollpos);
-    
-    	if (scrollpos >= header_height) { 
-            add_class_on_scroll();
-        } else {
-            remove_class_on_scroll();
-        }
-        
-        if(scrollpos == header_height && scrollpos == 0 && header_height == 0) {
-            remove_class_on_scroll();
-        }
-    
-    });
-</script>
--->
-    <!-- Gtag NoScript -->
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSKT6SZM"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    
-        <div class="title_main p1-rl" id="scene">
+---
+layout: default
+title: Sobre Mi
+lang: es
+permalink: /es/sobre-mi
+translation_key: about
+css:
+    - /web/styles/aboutme.css
+---
+<div class="title_main p1-rl" id="scene">
 <pre data-depth="0.08">
    _____ ___                   __       _____          
   /  _  \\_ |__   ____  __ ___/  |_    /     \   ____  
@@ -298,13 +39,13 @@
                 <div class="links-wrap">
                     <p>
                         <a href="https://www.linkedin.com/in/luis-felipe-lugo-p%C3%A1rraga-8b66a4b5/" target="_blank" rel="noopener noreferrer">
-                            <img src="/web/images/icons/menu/linkedin.svg" alt="linkedin icon">
+                            <img src="{{ '/web/images/icons/menu/linkedin.svg' | relative_url }}" alt="linkedin icon">
                             <span>LinkedIn</span>
                         </a>
                     </p>
                     <p>
                         <a href="https://github.com/Nemnis" target="_blank" rel="noopener noreferrer">
-                            <img src="/web/images/icons/menu/github.svg" alt="github icon">
+                            <img src="{{ '/web/images/icons/menu/github.svg' | relative_url }}" alt="github icon">
                             <span>GitHub</span>
                         </a>
                     </p>
@@ -359,7 +100,7 @@
                             <p>Self-employed</p>
                             <p>Worldwide (2021 - Today)</p>
                         </div>                        
-                        <img src="/web/images/luislugo_logo.png" alt="Luis Lugo Logo">
+                        <img src="{{ '/web/images/luislugo_logo.png' | relative_url }}" alt="Luis Lugo Logo">
                     </div>
                     <div class="data-box massive">
                         <div>
@@ -367,7 +108,7 @@
                             <p>Massive Shops S.L</p>
                             <p>Canary Islands, Spain (2018 - 2021)</p>
                         </div>
-                        <img src="/web/images/empresas/massiveshops.png" alt="MassiveShops logo">
+                        <img src="{{ '/web/images/empresas/massiveshops.png' | relative_url }}" alt="MassiveShops logo">
                     </div>
                     <div class="data-box">
                         <div>
@@ -375,7 +116,7 @@
                             <p>Treexor Technology S.L</p>
                             <p>Canary Islands, Spain (2016 - 2018)</p>
                         </div>
-                        <img src="/web/images/empresas/treexor.jpg" alt="Treexor Technology SL logo">
+                        <img src="{{ '/web/images/empresas/treexor.jpg' | relative_url }}" alt="Treexor Technology SL logo">
                     </div>
                     <div class="data-box">
                         <div>
@@ -383,7 +124,7 @@
                             <p>Tuguu S.L.U</p>
                             <p>Canary Islands, Spain (2015 - 2016)</p>
                         </div>
-                        <img src="/web/images/empresas/tuguu.png" alt="Tuguu SLU logo">
+                        <img src="{{ '/web/images/empresas/tuguu.png' | relative_url }}" alt="Tuguu SLU logo">
                     </div>
                 </div>
             </div>
@@ -398,7 +139,7 @@
                             <p>Tecno Inte TF</p>
                             <p>Canary Islands, Spain (2021)</p>
                         </div>
-                        <img src="/web/images/empresas/tecno-inte.png" alt="Tecno Inte TF logo">
+                        <img src="{{ '/web/images/empresas/tecno-inte.png' | relative_url }}" alt="Tecno Inte TF logo">
                     </div>
                     
                     <div class="data-box">
@@ -407,7 +148,7 @@
                             <p>Tuguu S.L.U</p>
                             <p>Canary Islands, Spain (2015)</p>
                         </div>
-                        <img src="/web/images/empresas/tuguu.png" alt="Tuguu SLU logo">
+                        <img src="{{ '/web/images/empresas/tuguu.png' | relative_url }}" alt="Tuguu SLU logo">
                     </div>                    
                 </div>
             </div>
@@ -448,11 +189,11 @@
             <h1>Idiomas</h1>
             <div class="langs-wrap">
                 <p>
-                    <img src="/web/images/icons/menu/spanish.svg" alt="spanish icon">
+                    <img src="{{ '/web/images/icons/menu/spanish.svg' | relative_url }}" alt="spanish icon">
                     <span>Español</span>
                 </p>
                 <p>
-                    <img src="/web/images/icons/menu/english.svg" alt="english icon">
+                    <img src="{{ '/web/images/icons/menu/english.svg' | relative_url }}" alt="english icon">
                     <span>Ingl&eacute;s</span>
                 </p>
             </div>
@@ -465,51 +206,51 @@
                 </div>
                 <div class="web-developer prog-box">
                     <div class="prog-name">
-                        <img src="/web/images/icons/html.svg" alt="Html Icon">
+                        <img src="{{ '/web/images/icons/html.svg' | relative_url }}" alt="Html Icon">
                         <p>HTML5</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/css3.svg" alt="CSS3 Icon">
+                        <img src="{{ '/web/images/icons/css3.svg' | relative_url }}" alt="CSS3 Icon">
                         <p>CSS3</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/sass.svg" alt="Sass Icon">
+                        <img src="{{ '/web/images/icons/sass.svg' | relative_url }}" alt="Sass Icon">
                         <p>Sass</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/javascript.svg" alt="JavaScript Icon">
+                        <img src="{{ '/web/images/icons/javascript.svg' | relative_url }}" alt="JavaScript Icon">
                         <p>JavaScript</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/php.svg" alt="PHP Icon">
+                        <img src="{{ '/web/images/icons/php.svg' | relative_url }}" alt="PHP Icon">
                         <p>PHP</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/mysql.svg" alt="MySQL Icon">
+                        <img src="{{ '/web/images/icons/mysql.svg' | relative_url }}" alt="MySQL Icon">
                         <p>MySQL</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/python.svg" alt="Python Icon">
+                        <img src="{{ '/web/images/icons/python.svg' | relative_url }}" alt="Python Icon">
                         <p>Python</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/node.svg" alt="Node Icon">
+                        <img src="{{ '/web/images/icons/node.svg' | relative_url }}" alt="Node Icon">
                         <p>Node.js</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/bootstrap.svg" alt="Bootstrap Icon">
+                        <img src="{{ '/web/images/icons/bootstrap.svg' | relative_url }}" alt="Bootstrap Icon">
                         <p>Bootstrap</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/jquery.svg" alt="jQuery Icon">
+                        <img src="{{ '/web/images/icons/jquery.svg' | relative_url }}" alt="jQuery Icon">
                         <p>jQuery</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/gulp.svg" alt="Gulp Icon">
+                        <img src="{{ '/web/images/icons/gulp.svg' | relative_url }}" alt="Gulp Icon">
                         <p>Gulp</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/wordpress.svg" alt="WordPress Icon">
+                        <img src="{{ '/web/images/icons/wordpress.svg' | relative_url }}" alt="WordPress Icon">
                         <p>WordPress</p>
                     </div>
                 </div>
@@ -519,23 +260,23 @@
                 </div>
                 <div class="graphic-design prog-box">
                     <div class="prog-name">
-                        <img src="/web/images/icons/photoshop.svg" alt="Photoshop Icon">
+                        <img src="{{ '/web/images/icons/photoshop.svg' | relative_url }}" alt="Photoshop Icon">
                         <p>Photoshop</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/illustrator.svg" alt="Illustrator Icon">
+                        <img src="{{ '/web/images/icons/illustrator.svg' | relative_url }}" alt="Illustrator Icon">
                         <p>Illustrator</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/aftereffects.svg" alt="After Effects Icon">
+                        <img src="{{ '/web/images/icons/aftereffects.svg' | relative_url }}" alt="After Effects Icon">
                         <p>After Effects</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/premiere.svg" alt="Premiere Pro Icon">
+                        <img src="{{ '/web/images/icons/premiere.svg' | relative_url }}" alt="Premiere Pro Icon">
                         <p>Premiere Pro</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/lightroom.svg" alt="Lightroom Icon">
+                        <img src="{{ '/web/images/icons/lightroom.svg' | relative_url }}" alt="Lightroom Icon">
                         <p>Lightroom</p>
                     </div>
                 </div>
@@ -545,11 +286,11 @@
                 </div>
                 <div class="version-control prog-box">
                     <div class="prog-name">
-                        <img src="/web/images/icons/github.svg" alt="GitHub Icon">
+                        <img src="{{ '/web/images/icons/github.svg' | relative_url }}" alt="GitHub Icon">
                         <p>GitHub</p>
                     </div>
                     <div class="prog-name">
-                    <img src="/web/images/icons/sourcetree.svg" alt="SourceTree Icon">
+                    <img src="{{ '/web/images/icons/sourcetree.svg' | relative_url }}" alt="SourceTree Icon">
                         <p>SourceTree</p>
                     </div>
                 </div>
@@ -559,19 +300,19 @@
                 </div>
                 <div class="prototyping prog-box">
                     <div class="prog-name">
-                        <img src="/web/images/icons/figma.svg" alt="Figma Icon"> 
+                        <img src="{{ '/web/images/icons/figma.svg' | relative_url }}" alt="Figma Icon"> 
                         <p>Figma</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/sketch.svg" alt="Sketch Icon"> 
+                        <img src="{{ '/web/images/icons/sketch.svg' | relative_url }}" alt="Sketch Icon"> 
                         <p>Sketch</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/zeplin.svg" alt="Zeplin Icon"> 
+                        <img src="{{ '/web/images/icons/zeplin.svg' | relative_url }}" alt="Zeplin Icon"> 
                         <p>Zeplin</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/invision.svg" alt="inVision Icon"> 
+                        <img src="{{ '/web/images/icons/invision.svg' | relative_url }}" alt="inVision Icon"> 
                         <p>inVision</p>
                     </div>                
                 </div>
@@ -581,23 +322,23 @@
                 </div>
                 <div class="prototyping prog-box">
                     <div class="prog-name">
-                        <img src="/web/images/icons/shopify.svg" alt="Shopify Icon"> 
+                        <img src="{{ '/web/images/icons/shopify.svg' | relative_url }}" alt="Shopify Icon"> 
                         <p>Shopify</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/icon-todo.svg" alt="Kanvan & Scrum Icon"> 
+                        <img src="{{ '/web/images/icons/icon-todo.svg' | relative_url }}" alt="Kanvan & Scrum Icon"> 
                         <p>Kanvan & Scrum</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/jira.svg" alt="Jira Icon"> 
+                        <img src="{{ '/web/images/icons/jira.svg' | relative_url }}" alt="Jira Icon"> 
                         <p>Jira</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/icons/trello.svg" alt="Trello Icon"> 
+                        <img src="{{ '/web/images/icons/trello.svg' | relative_url }}" alt="Trello Icon"> 
                         <p>Trello</p>
                     </div>
                     <div class="prog-name">
-                        <img src="/web/images/asana.png" alt="Asana Icon"> 
+                        <img src="{{ '/web/images/asana.png' | relative_url }}" alt="Asana Icon"> 
                         <p>Asana</p>
                     </div>            
                 </div>
@@ -702,60 +443,3 @@
         console.log(e);
     });*/
 </script>
-        <!--<script src="/assets/js/main.js"></script>-->
-
-    <div id="underCwrap" class="under-construction" onclick="openUnderC()">
-        <div class="udc-wrap">
-            <div class="img-wrap">
-                <svg height="34" viewBox="0 0 36 34" width="36" xmlns="http://www.w3.org/2000/svg"><path d="M27.6 14.2426092L27.6 15.6852683C27.6 16.2158254 27.1970563 16.6459269 26.7 16.6459269L21.3 16.6459269C20.8029437 16.6459269 20.4 16.2158254 20.4 15.6852683L20.4 14.2426092C11.4042134 14.9678356 6 18.0459827 6 16.6339865 6 15.1676293 14.906129 9.9124942 22.2 9.07386223L22.2 8.96065854C22.2 8.43010148 22.6029437 8 23.1 8L24.9 8C25.3970563 8 25.8 8.43010148 25.8 8.96065854L25.8 9.0732069C33.093871 9.9124942 42 15.1676293 42 16.6339865 42 18.0459827 36.5957866 14.9678356 27.6 14.2426092zM22.5 18L25.5 18C26.0522847 18 26.5 18.4477153 26.5 19L26.5 39.5C26.5 40.8807119 25.3807119 42 24 42L24 42C22.6192881 42 21.5 40.8807119 21.5 39.5L21.5 19C21.5 18.4477153 21.9477153 18 22.5 18z" fill="#ffffff" fill-rule="evenodd" transform="translate(-6 -8)"/></svg>
-            </div>
-            <img src="/web/images/gifs/offline-granny.gif" alt="Offline Granny">
-            <p>Este sitio está actualmente en desarrollo 👨🏽‍💻</p>
-        </div>
-    </div>
-</div>
-
-<footer class="site-footer">    
-    <div class="footer-content">
-        <p>Sitio Desarrollado usando Jekyll sobre GitHub Pages.</p>
-        <!--<nav class="footer-nav">
-            
-                
-                
-                    <a href="/es/">
-                        Inicio
-                    </a>
-                
-            
-                
-                
-                    <a href="/es/sobre-mi">
-                        Sobre mí
-                    </a>
-                
-            
-        </nav>
-
-        <div class="footer-links">
-            <a href="#">
-                Política de privacidad
-            </a>
-            <a href="#">
-                Contacto
-            </a>
-        </div>-->
-        <p class="footer-copyright">
-            Luis Lugo © 2026. 
-            Todos los derechos reservados.
-        </p>
-    </div>
-</footer>
-<script>
-    const underWrap = document.getElementById("underCwrap");
-
-    function openUnderC() {
-        underWrap.classList.toggle("active")
-    }
-</script>
-</body>
-</html>

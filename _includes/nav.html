@@ -1,5 +1,54 @@
-<!-- Nav -->
 <nav class="space-mono-regular p1-rl">
+    <ul>
+        <li>
+        {% assign current_language = site.data.languages[page.lang] %}
+
+        {% for item in site.data.navigation %}
+
+            {% assign nav_page = site.pages
+                | where: "lang", page.lang
+                | where: "translation_key", item.key
+                | first
+            %}
+
+            {% if nav_page %}
+                <a href="{{ nav_page.url | relative_url }}">{{ current_language.nav[item.key] }}</a>
+            {% endif %}
+
+        {% endfor %}
+        </li>
+        <li class="lang-selector">
+            {% include language-selector.html %}
+        </li>
+    </ul>
+</nav>
+<script>
+    // nav change on scroll
+    let scrollpos = window.scrollY;
+    const header = document.querySelector("nav");
+    const header_height = header.offsetHeight;
+    
+    const add_class_on_scroll = () => header.classList.add("scrolled");
+    const remove_class_on_scroll = () => header.classList.remove("scrolled");
+    
+    window.addEventListener('scroll', function() { 
+    	scrollpos = window.scrollY;
+        //console.log("header_height " + header_height + " | scrollpos " + scrollpos);
+    
+    	if (scrollpos >= header_height) { 
+            add_class_on_scroll();
+        } else {
+            remove_class_on_scroll();
+        }
+        
+        if(scrollpos == header_height && scrollpos == 0 && header_height == 0) {
+            remove_class_on_scroll();
+        }
+    
+    });
+</script>
+<!-- Old Nav -->
+<!--<nav class="space-mono-regular p1-rl">
     <ul>
         <li class="link-home">
             <a href="{{ '/' | relative_url }}">Home</a>
@@ -23,7 +72,8 @@
         </li>
         <li class="lang-selector">
             {% include language-selector.html %}
-        </li>
+        </li> 
+-->
         <!--<li id="userActions">			
             <a id="userNick" href="#">User</a>
         </li>
@@ -34,7 +84,7 @@
             <a class="logButton" href="#">LogIn</a>
             <a class="signButton" href="#">SignIn</a>
         </li>-->
-    </ul>
+<!--    </ul>
 </nav>
 <script>
     /* Nav */
@@ -85,3 +135,4 @@
     
     });
 </script>
+-->

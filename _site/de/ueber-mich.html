@@ -42,8 +42,97 @@
 
 <body>
 <div class="fh">
-    <!-- Nav -->
-<nav class="space-mono-regular p1-rl">
+    <nav class="space-mono-regular p1-rl">
+    <ul>
+        <li>
+        
+
+        
+
+            
+
+            
+                <a href="/de/">Startseite</a>
+            
+
+        
+
+            
+
+            
+                <a href="/de/ueber-mich">Über mich</a>
+            
+
+        
+        </li>
+        <li class="lang-selector">
+            <div class="language-selector">
+    
+        
+        
+        
+        
+            <a href="/es/sobre-mi" >
+                <img src="/web/images/flags/es.png" alt="Español"><span>Español</span>
+            </a>
+
+        
+
+    
+        
+        
+        
+        
+            <a href="/en/about-me" >
+                <img src="/web/images/flags/en.png" alt="English"><span>English</span>
+            </a>
+
+        
+
+    
+        
+        
+        
+        
+            <a href="/de/ueber-mich" class="active">
+                <img src="/web/images/flags/de.png" alt="Deutsch"><span>Deutsch</span>
+            </a>
+
+        
+
+    
+
+</div>
+        </li>
+    </ul>
+</nav>
+<script>
+    // nav change on scroll
+    let scrollpos = window.scrollY;
+    const header = document.querySelector("nav");
+    const header_height = header.offsetHeight;
+    
+    const add_class_on_scroll = () => header.classList.add("scrolled");
+    const remove_class_on_scroll = () => header.classList.remove("scrolled");
+    
+    window.addEventListener('scroll', function() { 
+    	scrollpos = window.scrollY;
+        //console.log("header_height " + header_height + " | scrollpos " + scrollpos);
+    
+    	if (scrollpos >= header_height) { 
+            add_class_on_scroll();
+        } else {
+            remove_class_on_scroll();
+        }
+        
+        if(scrollpos == header_height && scrollpos == 0 && header_height == 0) {
+            remove_class_on_scroll();
+        }
+    
+    });
+</script>
+<!-- Old Nav -->
+<!--<nav class="space-mono-regular p1-rl">
     <ul>
         <li class="link-home">
             <a href="/">Home</a>
@@ -103,7 +192,8 @@
     
 
 </div>
-        </li>
+        </li> 
+-->
         <!--<li id="userActions">			
             <a id="userNick" href="#">User</a>
         </li>
@@ -114,7 +204,7 @@
             <a class="logButton" href="#">LogIn</a>
             <a class="signButton" href="#">SignIn</a>
         </li>-->
-    </ul>
+<!--    </ul>
 </nav>
 <script>
     /* Nav */
@@ -165,6 +255,7 @@
     
     });
 </script>
+-->
     <!-- Gtag NoScript -->
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSKT6SZM"
@@ -185,6 +276,42 @@
         </div>
     </div>
 </div>
+
+<footer class="site-footer">    
+    <div class="footer-content">
+        <p>Die Website wurde mit Jekyll auf GitHub Pages entwickelt.</p>
+        <!--<nav class="footer-nav">
+            
+                
+                
+                    <a href="/de/">
+                        Startseite
+                    </a>
+                
+            
+                
+                
+                    <a href="/de/ueber-mich">
+                        Über mich
+                    </a>
+                
+            
+        </nav>
+
+        <div class="footer-links">
+            <a href="#">
+                Datenschutzerklärung
+            </a>
+            <a href="#">
+                Kontakt
+            </a>
+        </div>-->
+        <p class="footer-copyright">
+            Luis Lugo © 2026. 
+            Alle Rechte vorbehalten.
+        </p>
+    </div>
+</footer>
 <script>
     const underWrap = document.getElementById("underCwrap");
 

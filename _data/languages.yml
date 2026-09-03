@@ -1,11 +1,35 @@
 es:
   name: Español
   flag: /web/images/flags/es.png
+  nav:
+    home: Inicio
+    about: Sobre mí
+  footer:
+    devtech: Sitio Desarrollado usando Jekyll sobre GitHub Pages.
+    copyright: Todos los derechos reservados.
+    privacy: Política de privacidad
+    contact: Contacto
 
 en:
   name: English
   flag: /web/images/flags/en.png
+  nav:
+    home: Home
+    about: About me
+  footer:
+    devtech: Site developed using Jekyll on GitHub Pages.
+    copyright: All rights reserved.
+    privacy: Privacy policy
+    contact: Contact
 
 de:
   name: Deutsch
   flag: /web/images/flags/de.png
+  nav:
+    home: Startseite
+    about: Über mich
+  footer:
+    devtech: Die Website wurde mit Jekyll auf GitHub Pages entwickelt.
+    copyright: Alle Rechte vorbehalten.
+    privacy: Datenschutzerklärung
+    contact: Kontakt
